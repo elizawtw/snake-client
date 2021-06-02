@@ -24,6 +24,10 @@ const handleUserInput = function (data) {
     connection.write('Move: down');
   } else if ( data === 'd') {
     connection.write('Move: right');
+  } else if ( data === 't') {
+    connection.write('Say: Fun time!');
+  } else if (data === 'g') {
+    connection.write('Say: best snake in town');
   }
 };
 
