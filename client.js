@@ -1,12 +1,13 @@
 const net = require('net');
 const stdin = process.stdin;
 stdin.setEncoding('utf8');
+const { IP, PORT } = require("./constants");
 
 const connect = function () {
   //create an object named conn
   const conn = net.createConnection({
-    host: "135.23.222.131",// IP address here,
-    port:50542// PORT number here,
+    host : IP,// IP address here,
+    port: PORT// PORT number here,
   });
 
   // interpret incoming data as text
@@ -20,11 +21,7 @@ const connect = function () {
    console.log("Successfully connected to game server");
    conn.write("Name: ELI");
    
-   //setInterval(()=> {
-     //conn.write("Move: up");
-   //}, 500);
-
-   console.log('eliza');
+   
 
   })
 
