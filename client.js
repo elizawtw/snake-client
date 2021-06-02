@@ -20,9 +20,9 @@ const connect = function () {
    console.log("Successfully connected to game server");
    conn.write("Name: ELI");
    
-   setInterval(()=> {
-     conn.write("Move: up");
-   }, 500);
+   //setInterval(()=> {
+     //conn.write("Move: up");
+   //}, 500);
 
    console.log('eliza');
 
