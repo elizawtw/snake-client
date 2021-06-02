@@ -11,12 +11,21 @@ const connect = function () {
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
-  conn.write("Name: ELI");
+  
+  
   conn.on("data", (data) => {
     console.log(data);
   });
-  conn.on('connection', () => {
-    console.log("Successfully connected to game server");
+  conn.on('connect', () => {
+   console.log("Successfully connected to game server");
+   conn.write("Name: ELI");
+   
+   setInterval(()=> {
+     conn.write("Move: up");
+   }, 500);
+
+   console.log('eliza');
+
   })
 
   return conn;
